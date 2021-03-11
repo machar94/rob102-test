@@ -10,4 +10,4 @@ RUN apt-get update \
     # Cmake
     cmake \
     # Cleanup
-    rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
