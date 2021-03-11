@@ -6,7 +6,7 @@ USER root
 RUN apt-get update \
     && apt-get install -y \
     # C++ tools
-    build-essential
+    build-essential \
     # Cmake
     apt install snapd \
     snap install core \
