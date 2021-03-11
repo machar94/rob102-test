@@ -6,10 +6,10 @@ USER root
 RUN apt-get update \
     && apt-get install -y \
     # C++ tools
-    && apt-get install build-essential \
+    && apt-get install build-essential
     # Cmake
-    && apt install snapd \
-    && snap install core \
-    && snap install cmake --classic \
+    # && apt install snapd \
+    # && snap install core \
+    # && snap install cmake --classic \
     # Cleanup
-    && rm -rf /var/lib/apt/lists/*
+    # && rm -rf /var/lib/apt/lists/*
