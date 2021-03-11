@@ -1,5 +1,7 @@
 FROM gitpod/workspace-full-vnc
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # Install packages
 RUN wget -qO- https://cyberbotics.com/Cyberbotics.asc | sudo apt-key add - \
     && sudo apt-add-repository 'deb https://cyberbotics.com/debian/ binary-amd64/' \
