@@ -8,8 +8,6 @@ RUN apt-get update \
     # C++ tools
     build-essential \
     # Cmake
-    apt install snapd \
-    snap install core \
-    snap install cmake --classic \
+    cmake \
     # Cleanup
     rm -rf /var/lib/apt/lists/*
