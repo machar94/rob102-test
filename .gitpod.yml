@@ -3,4 +3,4 @@ vscode:
     - ms-vscode.cmake-tools@1.6.0:lvoCR5usjseB5thI3sZhWA==
     - ms-azuretools.vscode-docker@1.10.0:0s3Qn7BdtADU4ticMjqBpA==
 image:
-  file: .gitpod.Dockerfile
+  file: .gitpod.VNCDockerfile
