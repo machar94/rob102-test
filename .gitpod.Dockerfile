@@ -1,19 +1,15 @@
 FROM debian:buster
 
-# Install sudo and add privelages to docker user
-RUN apt-get update && \
-    apt-get -y install sudo
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
-USER docker
+USER root
 
 # Install custom tools, runtime, etc.
-RUN sudo apt-get update \
-    && sudo apt-get install -y \
+RUN apt-get update \
+    && apt-get install -y \
     # C++ tools
-    && sudo apt-get install build-essential \
+    && apt-get install build-essential \
     # Cmake
-    && sudo apt install snapd \
-    && sudo snap install core \
-    && sudo snap install cmake --classic \
+    && apt install snapd \
+    && snap install core \
+    && snap install cmake --classic \
     # Cleanup
-    && sudo rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
